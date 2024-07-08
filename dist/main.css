@@ -127,6 +127,7 @@
 .glide__slide-content {
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 .glide__slide-title {
   padding: 20px;
