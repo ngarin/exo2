@@ -1,0 +1,322 @@
+.glide {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+.glide * {
+  box-sizing: inherit;
+}
+.glide__track {
+  overflow: hidden;
+}
+.glide__slides {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  touch-action: pan-Y;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  will-change: transform;
+}
+.glide__slides--dragging {
+  user-select: none;
+}
+.glide__slide {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  white-space: normal;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.glide__slide a {
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.glide__arrows {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+.glide__bullets {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+.glide--rtl {
+  direction: rtl;
+}
+
+.glide {
+  position: relative;
+}
+.glide__arrows {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.glide__arrow {
+  background: none;
+  border: none;
+  font-size: 75px;
+  cursor: pointer;
+}
+.glide__arrow--left {
+  margin-left: -50px;
+}
+.glide__arrow--right {
+  margin-right: -50px;
+}
+@media screen and (max-width: 900px) {
+  .glide__arrow--left {
+    margin-left: -33px;
+  }
+  .glide__arrow--right {
+    margin-right: -33px;
+  }
+}
+.glide__slides {
+  overflow: hidden;
+  padding: 10px;
+}
+.glide__slide {
+  display: flex;
+  flex-direction: column;
+  height: 430px;
+  background-color: white;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: 200ms;
+}
+@media screen and (max-width: 900px) {
+  .glide__slide {
+    flex-direction: row;
+    height: auto;
+  }
+}
+@media screen and (min-width: 901px) {
+  .glide__slide:hover {
+    width: 250px !important;
+    height: 450px;
+    margin-top: -10px;
+  }
+}
+.glide__slide-img {
+  width: 100%;
+  height: 145px;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (max-width: 900px) {
+  .glide__slide-img {
+    width: 200px;
+    height: 100%;
+  }
+}
+.glide__slide-content {
+  display: flex;
+  flex-direction: column;
+}
+.glide__slide-title {
+  padding: 20px;
+  text-align: center;
+}
+.glide__slide-title h3 {
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 15px;
+}
+.glide__slide-tag {
+  font-size: 12px;
+}
+.glide__slide-tag--star {
+  color: green;
+}
+.glide__slide-tag--galaxy {
+  color: red;
+}
+.glide__slide-tag--black-hole {
+  color: orange;
+}
+.glide__slide-desc {
+  padding: 0 20px;
+  text-align: center;
+  font-size: 14px;
+  flex: 1;
+}
+.glide__slide-cta {
+  margin-top: 20px;
+}
+.glide__slide-cta button {
+  background: none;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-top: 1px solid #D9D9D9;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Amaranth", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+body h1, body h2 {
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  body body {
+    color: red;
+  }
+}
+body .header {
+  display: flex;
+  height: 400px;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("/img/voie-lactee-galaxie.jpg");
+  background-size: cover;
+}
+body .header-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+body .header-content__title {
+  text-align: center;
+  font-size: 62px;
+  color: white;
+}
+body .header__nav {
+  display: flex;
+  width: 100%;
+  background-color: #24272C;
+  justify-content: space-between;
+}
+body .header__nav-menu {
+  display: flex;
+}
+body .header__nav__item {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+}
+body .header__nav__item:hover {
+  background-color: #302B4D;
+}
+body .header__nav__item-footer {
+  flex: 1;
+}
+body .main {
+  background-color: #ECF0F7;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+body .main-wrapper {
+  width: 800px;
+}
+@media screen and (max-width: 900px) {
+  body .main-wrapper {
+    width: calc(100% - 50px);
+  }
+}
+body .main-wrapper__item-title {
+  margin: 0;
+  padding: 50px 0;
+  text-align: center;
+  font-size: 23px;
+}
+body footer {
+  background-color: #0E0E0E;
+  padding: 30px;
+}
+body footer .footer {
+  display: flex;
+}
+@media screen and (max-width: 900px) {
+  body footer .footer {
+    flex-direction: column;
+  }
+}
+body footer .footer__item {
+  padding: 20px;
+  min-width: 200px;
+}
+body footer .footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body footer .footer__title {
+  color: white;
+  margin-bottom: 10px;
+}
+body footer .footer__link a, body footer .footer__quote {
+  color: #94999F;
+  text-decoration: none;
+  font-size: 12px;
+  margin: 0;
+}
+body footer .footer__socials {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+body footer .footer__social {
+  margin: 0 10px;
+}
+body footer .footer__social a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #94999F;
+  box-sizing: border-box;
+}
+body footer .footer__social--fb a {
+  padding: 6px 0 0 9px;
+}
+body footer .footer__social--fb img {
+  width: 10px;
+}
+body footer .footer__social--tw a {
+  padding: 6px 0 0 7px;
+}
+body footer .footer__social--tw img {
+  width: 15px;
+}
+body footer .footer__social--sn a {
+  padding: 5px 0 0 5px;
+}
+body footer .footer__social--sn img {
+  width: 18px;
+}
+body footer .footer__social--in a {
+  padding: 5px 0 0 6px;
+}
+body footer .footer__social--in img {
+  width: 16px;
+}
+body footer .footer__copy {
+  color: #565C5F;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */

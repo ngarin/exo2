@@ -1,0 +1,190 @@
+@import "../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "glide";
+
+body {
+    font-family: "Amaranth", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+
+    h1, h2 {
+        font-weight: 400;
+    }
+
+    @media screen and (max-width: 768px) {
+        body {
+            color: red;
+        }
+    }
+
+    .header {
+        display: flex;
+        height: 400px;
+        align-items: center;
+        flex-direction: column;
+        background-image: url('/img/voie-lactee-galaxie.jpg');
+        background-size: cover;
+
+        &-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+
+            &__title {
+                text-align: center;
+                font-size: 62px;
+                color: white;
+            }
+        }
+
+        &__nav {
+            display: flex;
+            width: 100%;
+            background-color: #24272C;
+            justify-content: space-between;
+
+            &-menu {
+                display: flex;
+            }
+
+            &__item {
+                color: white;
+                text-decoration: none;
+                display: block;
+                padding: 15px;
+
+                &:hover {
+                    background-color: #302B4D;
+                }
+
+                &-footer {
+                    flex: 1
+                }
+            }
+        }
+    }
+
+    .main {
+        background-color: #ECF0F7;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 50px;
+
+        &-wrapper {
+            width: 800px;
+
+            @media screen and (max-width: 900px) {
+                width: calc(100% - 50px);
+            }
+
+            &__item {
+                &-title {
+                    margin: 0;
+                    padding: 50px 0;
+                    text-align: center;
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: #0E0E0E;
+        padding: 30px;
+        .footer {
+            display: flex;
+
+            @media screen and (max-width: 900px) {
+                flex-direction: column;
+            }
+
+            &__item {
+                padding: 20px;
+                min-width: 200px;
+            }
+
+            &__links {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            &__title {
+                color: white;
+                margin-bottom: 10px
+            }
+
+            &__link a, &__quote {
+                color: #94999F;
+                text-decoration: none;
+                font-size: 12px;
+                margin: 0;
+            }
+
+            &__socials {
+                padding: 0;
+                list-style: none;
+                display: flex;
+                justify-content: center;
+            }
+
+            &__social {
+                margin: 0 10px;
+                a {
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    border: 1px solid #94999F;
+                    box-sizing: border-box;
+                }
+
+                &--fb {
+                    a {
+                        padding: 6px 0 0 9px;
+                    }
+
+                    img {
+                        width: 10px;
+                    }
+                }
+
+                &--tw {
+                    a {
+                        padding: 6px 0 0 7px;
+                    }
+
+                    img {
+                        width: 15px;
+                    }
+                }
+
+                &--sn {
+                    a {
+                        padding: 5px 0 0 5px;
+                    }
+
+                    img {
+                        width: 18px;
+                    }
+                }
+
+                &--in {
+                    a {
+                        padding: 5px 0 0 6px;
+                    }
+
+                    img {
+                        width: 16px;
+                    }
+                }
+            }
+
+            &__copy {
+                color: #565C5F;
+                text-align: center;
+            }
+        }
+    }
+}
